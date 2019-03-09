@@ -18,8 +18,9 @@ hound = "3.0"
 winapi = { version = "0.3", features = ["audiosessiontypes", "audioclient", "coml2api", "combaseapi", "debug", "devpkey", "handleapi", "ksmedia", "mmdeviceapi", "objbase", "std", "synchapi", "winuser"] }
 
 [target.'cfg(any(target_os = "linux", target_os = "dragonfly", target_os = "freebsd", target_os = "openbsd"))'.dependencies]
-alsa-sys = { version = "0.1", path = "alsa-sys" }
+alsa = { version = "0.2", path = "../alsa-rs" }
 libc = "0.2"
+alsa-sys = "0.1"
 
 [target.'cfg(any(target_os = "macos", target_os = "ios"))'.dependencies]
 coreaudio-rs = { version = "0.9.0", default-features = false, features = ["audio_unit", "core_audio"] }

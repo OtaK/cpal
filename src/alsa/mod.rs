@@ -25,6 +25,8 @@ pub type SupportedOutputFormats = VecIntoIter<SupportedFormat>;
 
 mod enumerate;
 
+mod mod2;
+
 
 struct Trigger {
     // [read fd, write fd]
